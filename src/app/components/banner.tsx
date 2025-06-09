@@ -26,11 +26,10 @@ export default function Banner() {
                     alt="" 
                 />
                 <div className="flex gap-x-[4vw] justify-center mt-6">
-                    <Link href="/collections" className="text-white bg-black p-2 h-max-12 rounded-full font-black px-5 cursor-pointer">COLLECTIONS</Link>
+                    <Link href="/collections" className="text-white bg-black p-2 rounded-full font-black px-5 cursor-pointer">COLLECTIONS</Link>
                     <Link href="/shopping" className="bg-white p-2 h-max-12 rounded-full font-black px-5 cursor-pointer">SHOP NOW</Link>
                 </div>
-            </div>
-            
+            </div>            
         </div>
     )
 }
