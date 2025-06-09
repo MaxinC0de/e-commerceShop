@@ -23,8 +23,8 @@ export default function ProductCard({ currentGender }: Gender) {
                 alt="" 
             />
             <div className="flex justify-between p-4">
-                <p className="text-sm">{currentGender === "men" ? men.title : women.title}</p>
-                <p className="text-sm font-extralight">{currentGender === "men" ? men.price : women.price} €</p>
+                <p className="text-sm md:text-base">{currentGender === "men" ? men.title : women.title}</p>
+                <p className="text-sm md:text-base font-extralight">{currentGender === "men" ? men.price : women.price} €</p>
             </div>
         </div>
     )
