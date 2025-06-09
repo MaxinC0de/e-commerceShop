@@ -11,7 +11,7 @@ export default function ProductCard({ currentGender }: Gender) {
         <div 
             className={`
                 shadow-xl rounded-br-2xl rounded-bl-2xl
-                ${isMobile ? "w-[44vw]" : "w-[28vw]"}
+                ${isMobile ? "w-[42vw]" : "w-[28vw]"}
             `}
         >
             <Image 

@@ -5,9 +5,10 @@ import { useDeviceStore } from "../hooks/useDeviceStore"
 
 export default function Nav() {
     const isMobile = useDeviceStore((state) => state.isMobile)
-    console.log(isMobile)
     return(
-        <nav className="flex p-[2vw]">
+        <nav className={`flex
+            ${isMobile ? "p-[5vw]" : "p-[2vw]"}
+        `}>
             <h1 className="font-black">{`"COMPANY"`}</h1>
                 <div className="ml-auto">
                     <Link className="mr-6 md:mr-12" href="/posters">SE CONNECTER</Link>
