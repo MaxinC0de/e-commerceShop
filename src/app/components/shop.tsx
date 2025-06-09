@@ -5,10 +5,12 @@ import ProductCard from "./productCard"
 import GenderToggler from "./genderToggler"
 import { useState } from "react"
 import { useDeviceStore } from "../hooks/useDeviceStore"
+import { ChevronUp, ChevronDown } from "lucide-react"
 
 export default function Shop() {
     const [currentGender, setCurrentGender] = useState("men")
     const isMobile = useDeviceStore((state) => state.isMobile)
+    const [showMore, setShowMore] = useState(false)
     return(
         <>
             <div className={`flex justify-between
@@ -20,9 +22,23 @@ export default function Shop() {
             <div className={`flex flex-wrap gap-y-5 justify-between
                 ${isMobile ? "p-[5vw]" : "p-[2vw]"}  
             `}>
-                 {Array.from({ length: 6 }).map((_, i) => (
-                    <ProductCard key={i} currentGender={currentGender} />
-                 ))}
+                 {Array.from({ length: 10 }).map((_, i) => {
+                    if(i < 4 || showMore) {
+                        return(
+                            <ProductCard key={i} i={i} currentGender={currentGender} />
+                        )
+                    }
+                 })}
+
+                    <div key="show-more" onClick={() => {setShowMore(!showMore)}} className="flex flex-col items-center w-full mt-4">
+                        {showMore 
+                            ? <ChevronUp onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" })}} className="cursor-pointer bg-grey rounded-full size-12 shadow-xl" />
+                            : <ChevronDown className="cursor-pointer bg-grey rounded-full size-12 shadow-xl" />
+                    }
+                        
+                        <p className="cursor-pointer font-black mt-2">{showMore ? "Voir Moins D'articles" : "Voir Plus D'articles"}</p>
+                    </div>
+                 
             </div>
         </>
     )

@@ -9,10 +9,10 @@ export default function Nav() {
         <nav className={`flex
             ${isMobile ? "p-[5vw]" : "p-[2vw]"}
         `}>
-            <h1 className="font-black">{`"COMPANY"`}</h1>
+            <Link href="/" className="font-black">{`"COMPANY"`}</Link>
                 <div className="ml-auto">
                     <Link className="mr-6 md:mr-12" href="/posters">SE CONNECTER</Link>
-                    <Link href="/a-propos">{`PANIER [0]`}</Link>
+                    <Link href="/panier">{`PANIER [0]`}</Link>
                 </div>
         </nav>
     )
