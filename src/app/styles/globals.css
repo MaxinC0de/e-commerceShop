@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "questrial";
+  src: url("/fonts/questrial.ttf");
+}
+
+@font-face {
+  font-family: "stretch";
+  src: url("/fonts/stretch.otf");
+}
+
+body {
+  font-family: "questrial";
+}
+
+.font-primary {
+  font-family: "stretch";
+}

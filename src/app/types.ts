@@ -1,0 +1,4 @@
+type Gender = {
+    currentGender: string
+
+}
