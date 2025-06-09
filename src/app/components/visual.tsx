@@ -1,7 +1,11 @@
+"use client"
+
 import Image from "next/image"
+import { useDeviceStore } from "../hooks/useDeviceStore"
 
 export default function Visual() {
-    return(
+    const isMobile = useDeviceStore((state) => state.isMobile)
+    if (!isMobile) { return(
         <div className="flex p-[2vw] gap-x-12 justify-center">
             <span className="w-[40vw]">
                 <Image 
@@ -28,5 +32,5 @@ export default function Visual() {
             </div>
             
         </div>
-    )
+    )}
 }
