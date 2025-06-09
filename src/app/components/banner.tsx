@@ -6,6 +6,7 @@ import { useDeviceStore } from "../hooks/useDeviceStore"
 
 export default function Banner() {
     const isMobile = useDeviceStore((state) => state.isMobile)
+    console.log(isMobile)
     return(
         <div className="flex justify-center relative h-120 w-full">
             <Image 

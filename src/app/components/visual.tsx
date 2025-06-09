@@ -13,7 +13,7 @@ export default function Visual() {
                 />
             </span>
             <div className="flex flex-col">
-                <h2 className="font-black text-8xl">"SIMPLICITE"</h2>
+                <h2 className="font-black text-8xl">{`"SIMPLICITE"`}</h2>
                 <p className="text-xl">Discover timeless essentials designed for everyday comfort and effortless style. Our collection focuses on clean lines, quality fabrics, and versatile pieces that fit seamlessly into any wardrobe</p>
                 <div className="w-full max-w-[25vw] flex items-center justify-between gap-x-6">
                     <Image 
