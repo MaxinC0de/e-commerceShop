@@ -6,7 +6,6 @@ import { useDeviceStore } from "../hooks/useDeviceStore"
 
 export default function Banner() {
     const isMobile = useDeviceStore((state) => state.isMobile)
-    console.log(isMobile)
     return(
         <div className="flex justify-center relative h-120 w-full">
             <Image 
@@ -25,9 +24,9 @@ export default function Banner() {
                     className="max-w-[80vw]"
                     alt="" 
                 />
-                <div className="flex gap-x-[4vw] justify-center mt-6">
-                    <Link href="/collections" className="text-white bg-black p-2 rounded-full font-black px-5 cursor-pointer">COLLECTIONS</Link>
-                    <Link href="/shopping" className="bg-white p-2 h-max-12 rounded-full font-black px-5 cursor-pointer">SHOP NOW</Link>
+                <div className="flex gap-x-2 justify-center mt-6">
+                    <Link href="/collections" className="text-white bg-black p-2 rounded-full text-xs md:text-base font-black px-2 md:px-5 cursor-pointer">COLLECTIONS</Link>
+                    <Link href="/shopping" className="bg-white p-2 h-max-12 rounded-full text-xs md:text-base font-black px-2 md:px-5 cursor-pointer">SHOP NOW</Link>
                 </div>
             </div>            
         </div>
