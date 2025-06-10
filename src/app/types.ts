@@ -26,7 +26,7 @@ export interface SharedProps {
 }
 
 export interface ImageViewerProps extends SharedProps {
-    setSrcIndex: (value: number) => void;
+    setSrcIndex: (value: any) => void;
 }
 
 export interface ZoomModalProps extends Omit<SharedProps, 'setIsZoomed'> {
