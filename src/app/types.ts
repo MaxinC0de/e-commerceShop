@@ -32,3 +32,8 @@ export interface ImageViewerProps extends SharedProps {
 export interface ZoomModalProps extends Omit<SharedProps, 'setIsZoomed'> {
     setIsZoomed: (value: boolean) => void;
 }
+
+export interface GenderTogglerProps {
+    currentGender: string
+    setCurrentGender: (value: string) => void
+}

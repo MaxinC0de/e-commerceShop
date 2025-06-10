@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
-import { Gender } from "../types"
+import { GenderTogglerProps } from "../types"
 import { useDeviceStore } from "../hooks/useDeviceStore"
 
-export default function GenderToggler({ currentGender, setCurrentGender } : Gender) {
+export default function GenderToggler({ currentGender, setCurrentGender } : GenderTogglerProps) {
     const [isAnimated, setIsAnimated] = useState(false)
     const isMobile = useDeviceStore((state) => state.isMobile)
     const xValue = isAnimated && currentGender === "women" ? (isMobile ? 105 : 120) : 0
