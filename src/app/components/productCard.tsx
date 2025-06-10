@@ -1,11 +1,10 @@
 "use client"
 
-import { Gender } from "../types"
 import { men, women } from "../data/tees"
 import Image from "next/image"
 import { useDeviceStore } from "../hooks/useDeviceStore"
 
-type ProductCardProps = Gender & { i: number }
+type ProductCardProps = { currentGender: string, i: number }
 
 export default function ProductCard({ currentGender, i }: ProductCardProps ) {
     const isMobile = useDeviceStore((state) => state.isMobile)
