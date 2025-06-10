@@ -9,7 +9,6 @@ type ProductCardProps = Gender & { i: number }
 
 export default function ProductCard({ currentGender, i }: ProductCardProps ) {
     const isMobile = useDeviceStore((state) => state.isMobile)
-    console.log(men)
     return(
         <div 
             className={`

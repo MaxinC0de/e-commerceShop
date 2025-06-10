@@ -6,6 +6,7 @@ import GenderToggler from "./genderToggler"
 import { useState } from "react"
 import { useDeviceStore } from "../hooks/useDeviceStore"
 import { ChevronUp, ChevronDown } from "lucide-react"
+import Link from "next/link"
 
 export default function Shop() {
     const [currentGender, setCurrentGender] = useState("men")
@@ -24,14 +25,16 @@ export default function Shop() {
             `}>
                  {Array.from({ length: 10 }).map((_, i) => {
                     if(i < 4 || showMore) {
-                        return(
-                            <ProductCard key={i} i={i} currentGender={currentGender} />
+                        return( 
+                            <Link href={`/product/${currentGender}/${i}`}>
+                                <ProductCard key={i} i={i} currentGender={currentGender} />
+                            </Link>
                         )
                     }
                  })}
 
                     <div key="show-more" onClick={() => {setShowMore(!showMore)}} className="flex flex-col items-center w-full mt-4">
-                        {showMore 
+                        {showMore
                             ? <ChevronUp onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" })}} className="cursor-pointer bg-grey rounded-full size-12 shadow-xl" />
                             : <ChevronDown className="cursor-pointer bg-grey rounded-full size-12 shadow-xl" />
                     }

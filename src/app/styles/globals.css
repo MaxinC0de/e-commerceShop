@@ -19,3 +19,7 @@ body {
 .font-primary {
   font-family: "stretch";
 }
+
+*:focus {
+  outline: none;
+}
